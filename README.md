@@ -19,7 +19,7 @@ The simulation is run from the case/ directory.
 
 
 
-!\[Cartoon](cartoon.png)
+![Cartoon](cartoon.png)
 
 
 
