@@ -37,38 +37,49 @@ The case is already set up for the simulation in the schematic diagram which acc
 Here are the basic commands to run the SAMPLE case on a Linux terminal:
 
 (i)	First, start in the mesh directory:
+
 cd mesh
 
 (ii)	Remove old mesh and regenerate mesh:
+
 rm -r constant/polyMesh
+
 blockMesh
 
 (iii)	Change into the case directory:
+
 cd ../case
 
 (iv) Remove old mesh from the case directory and copy in the regenerated mesh:
+
 rm -r constant/polyMesh/
+
 cp -r ../mesh/constant/polyMesh/ ./constant/
 
 (iv)	Copy over basic initial conditions into the case directory:
+
 cp ../mesh/alpha.water.orig 0/alpha.water
+
 cp ../mesh/U 0/U
 
 (v)	Any special initial conditions in these files have to be implemented as follows:
+
 setFields
 
 Thus, for example, alpha.water.orig has an instruction for the initial droplet to be initialized as a cylinder where the levelset function is 1 isnide the cylinder and 0 outside.  This instruction is written in code.  setFields replaces the code with an appropriate array of 1s and 0s.  The same for the file U.
 
 (vi)	If required, perform a domain decoposition for a parallel simulation as follows:
+
 decomposePar
   
 (vii)	Run the code in parallel model as follows:
+
 mpirun -np 12 interFoam -parallel
 
 # Output and Postprocessing
 
-Simulation results (velocity, pressure, droplet shape) are written to the **case/** directory at different timesteps. - Results can be visualized with ParaView (using the `.foam` file). 
-MATLAB scripts in the `matlab/` directory provide additional analysis and plotting tools.
+Simulation results (velocity, pressure, droplet shape) are written to the case/ directory at different timesteps. Results can be visualized with ParaView (using the "foam.foam" file). 
+MATLAB scripts in the "matlab/" directory in this repository provide additional analysis and plotting tools.
 
 4.	Key Notes
 
