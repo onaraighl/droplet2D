@@ -42,25 +42,25 @@ Here are the basic commands to run the SAMPLE case on a Linux terminal:
 
 (ii)	Remove old mesh and regenerate mesh:
 
-rm -r constant/polyMesh
+`rm` -r constant/polyMesh
 
 blockMesh
 
 (iii)	Change into the case directory:
 
-cd ../case
+`cd` ../case
 
 (iv) Remove old mesh from the case directory and copy in the regenerated mesh:
 
-rm -r constant/polyMesh/
+`rm` -r constant/polyMesh/
 
-cp -r ../mesh/constant/polyMesh/ ./constant/
+`cp` -r ../mesh/constant/polyMesh/ ./constant/
 
 (iv)	Copy over the basic conditions into the case directory:
 
-cp ../mesh/alpha.water.orig 0/alpha.water
+`cp` ../mesh/alpha.water.orig 0/alpha.water
 
-cp ../mesh/U 0/U
+`cp` ../mesh/U 0/U
 
 (v)	Implement the initial conditions by running "setFields":
 
