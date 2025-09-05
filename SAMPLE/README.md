@@ -7,6 +7,7 @@ This directory contains a sample OpenFOAM case showcasing how the 2D droplet imp
 The SAMPLE/ directory contains two key directories for running the simulation:
 
 •	case/ Holds the OpenFOAM case setup (control files, initial/boundary conditions, solver settings). 
+
 •	mesh/ Contains the computational grid used for the simulation. 
 
 These two directories must be read together.  The directory structure (including sub-directories is shown in the schematic diagram.
@@ -18,6 +19,7 @@ The case is already set up for the simulation in the schematic diagram which acc
 (i)	Fine-tune parameters in the case/ directory, including but not limited to:
 
 •	Physical parameters (surface tension, gas and liquid viscosities and densities), etc. in constant/transportProperties
+
 •	Frequency at which snapshots of the simulation state  are saved to files in constant/system/controlDict
 
 (ii)	Set up a domain decomposition for execution of the code in parallel, if required, in constant/system/decompseParDict
@@ -25,6 +27,7 @@ The case is already set up for the simulation in the schematic diagram which acc
 (iii)	Customize the initial conditions in the the following files, if required:
 
 •	mesh/alpha.water.orig
+
 •	mesh/U
 
 (iv)	Customize the mesh in the mesh/directory, if required.  This can be done by making changes to the blockmesh, in /mesh/system/blockMeshDict file.
@@ -70,7 +73,9 @@ MATLAB scripts in the `matlab/` directory provide additional analysis and plotti
 4.	Key Notes
 
 •	Ensure OpenFOAM is installed and sourced before running.
+
 •	Simulations may take time depending on computing resources. 
+
 •	Modify parameters in case/system/controlDict, case/system/fvSchemes, and case/system/fvSolution to experiment with settings.
 
 
