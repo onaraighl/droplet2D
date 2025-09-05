@@ -56,17 +56,17 @@ rm -r constant/polyMesh/
 
 cp -r ../mesh/constant/polyMesh/ ./constant/
 
-(iv)	Copy over basic initial conditions into the case directory:
+(iv)	Copy over the basic conditions into the case directory:
 
 cp ../mesh/alpha.water.orig 0/alpha.water
 
 cp ../mesh/U 0/U
 
-(v)	Any special initial conditions in these files have to be implemented as follows:
+(v)	Implement the initial conditions by running "setFields":
 
 setFields
 
-Thus, for example, alpha.water.orig has an instruction for the initial droplet to be initialized as a cylinder where the levelset function is 1 isnide the cylinder and 0 outside.  This instruction is written in code.  setFields replaces the code with an appropriate array of 1s and 0s.  The same for the file U.
+Thus, for example, alpha.water.orig has an instruction for the initial droplet to be initialized as a cylinder where the levelset function is 1 isnide the cylinder and 0 outside.  This instruction is written in code.  The command "setFields" replaces the code with an appropriate array of 1s and 0s.  The same for the file U.
 
 (vi)	If required, perform a domain decoposition for a parallel simulation as follows:
 
