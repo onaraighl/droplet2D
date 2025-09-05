@@ -81,7 +81,8 @@ mpirun -np 12 interFoam -parallel
 Simulation results (velocity, pressure, droplet shape) are written to the case/ directory at different timesteps. Results can be visualized with ParaView (using the "foam.foam" file). 
 MATLAB scripts in the "matlab/" directory in this repository provide additional analysis and plotting tools.
 
-4.	Key Notes
+
+# Last words ...
 
 •	Ensure OpenFOAM is installed and sourced before running.
 
