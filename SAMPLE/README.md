@@ -10,7 +10,7 @@ The SAMPLE/ directory contains two key directories for running the simulation:
 
 •	mesh/ Contains the computational grid used for the simulation. 
 
-These two directories must be read together.  The directory structure (including sub-directories is shown in the schematic diagram.
+These two directories must be read together.  The directory structure below in structure.png
 
 # How the case is set up
 
@@ -38,7 +38,7 @@ Here are the basic commands to run the SAMPLE case on a Linux terminal:
 
 (i)	First, start in the mesh directory:
 
-cd mesh
+`cd` mesh
 
 (ii)	Remove old mesh and regenerate mesh:
 
@@ -72,7 +72,7 @@ Thus, for example, alpha.water.orig has an instruction for the initial droplet t
 
 decomposePar
   
-(vii)	Run the code in parallel model as follows:
+(vii)	Run the code in parallel mode (parallel example with 12 cores):
 
 mpirun -np 12 interFoam -parallel
 
