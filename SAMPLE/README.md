@@ -14,7 +14,7 @@ These two directories must be read together.  The directory structure is shown b
 
 # How the case is set up
 
-The case is already set up for the simulation in the schematic diagram which accompanies this repository.  To understand this set-up in more detail, or to fine-tune the case, here are some key steps:
+The case is already set up for the simulation shown schematically in droplet2D/cartoon.png. To understand this set-up in more detail, or to fine-tune the case, here are some key steps:
 
 (i)	Fine-tune parameters in the case/ directory, including but not limited to:
 
