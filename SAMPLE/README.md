@@ -10,7 +10,7 @@ The SAMPLE/ directory contains two key directories for running the simulation:
 
 •	mesh/ Contains the computational grid used for the simulation. 
 
-These two directories must be read together.  The directory structure below in structure.png
+These two directories must be read together.  The directory structure is shown below in structure.png
 
 # How the case is set up
 
